@@ -11,7 +11,7 @@ script:
 
 after_success:
     -docker build -t atamilarasan/multi-client ./client
-    -docker build -t atamilarasan/multi-nginx ./nginx
+    -docker build -t atamilarasan/multi-nginx  ./nginx
     -docker build -t atamilarasan/multi-server ./server
     -docker build -t atamilarasan/multi-worker ./worker
 
@@ -22,5 +22,3 @@ after_success:
     - docker push atamilarasan/multi-nginx
     - docker push atamilarasan/multi-server
     - docker push atamilarasan/multi-worker
-
-
